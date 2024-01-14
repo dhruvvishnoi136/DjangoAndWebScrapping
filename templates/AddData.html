@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="formContainer" action="insertDataView" method="get">
+  <label for="JobTitle">Job Title</label>
+  <br>
+  <input class="outerButtons" type="text" id="JobTitle" name="JobTitle" required>
+  <br>
+  <label for="Salary">Salary</label>
+  <br>
+  <input class="outerButtons" type="text" id="Salary" name="Salary" required>
+  <br>
+  <label for="CompanyDetail">Company Detail</label>
+  <br>
+  <input class="outerButtons" type="text" id="CompanyDetail" name="CompanyDetail" required>
+  <br>
+  <label for="JobDesc">Job Description</label>
+  <br>
+  <input class="outerButtons" type="text" id="JobDesc" name="JobDesc" required>
+  <br>
+  <label for="JobReq">Job Requirment</label>
+  <br>
+  <input class="outerButtons" type="text" id="JobReq" name="JobReq" required>
+  <input class="outerButtons" type="submit" value="Add To Database">
+</form>
+{% endblock %}

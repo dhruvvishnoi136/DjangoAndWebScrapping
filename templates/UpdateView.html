@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="formWrapper">
+  <h1>Enter New Details</h1>
+  <form class="formContainer" action="fetchDatabase" method="post">
+    {% csrf_token %}
+    <label for="JobTitle">Job Title</label>
+    <br>
+    <input class="outerButtons" type="text" id="JobTitle" name="JobTitle" required>
+    <br>
+    <label for="Salary">Salary</label>
+    <br>
+    <input class="outerButtons" type="text" id="Salary" name="Salary" required>
+    <br>
+    <label for="CompanyDetail">Company Detail</label>
+    <br>
+    <input class="outerButtons" type="text" id="CompanyDetail" name="CompanyDetail" required>
+    <br>
+    <label for="JobDesc">Job Description</label>
+    <br>
+    <input class="outerButtons" type="text" id="JobDesc" name="JobDesc" required>
+    <br>
+    <label for="JobReq">Job Requirment</label>
+    <br>
+    <input class="outerButtons" type="text" id="JobReq" name="JobReq" required>
+    <input type="hidden" name="oldData" value="{{parsedData}}">
+    <input type="hidden" name="action" value="updateFinal">
+    <input class="outerButtons" type="submit" value="Update Entry">
+  </form>
+</div>
+
+{% endblock %}

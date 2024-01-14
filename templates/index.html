@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <h5>Features:- Read, Delete, Update data from MongoDb Atlas Server and Add to it Manually</h5>
+  <h6>To Run Scrapper Check the ReadMe.md file on Github Repository</h6>
+  <br>
+  <br>
+  <input class ="outerButtons" type="button" value="Get Old Data (From MongoDb)" onclick="location.href='{% url 'fetchDatabase' %}'">
+  <input class ="outerButtons" type="button" value="Add to Database(Manual Insert)" onclick="location.href='{% url 'insertDataView' %}'">
+{% endblock %}

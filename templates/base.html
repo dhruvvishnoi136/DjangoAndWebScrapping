@@ -1,0 +1,16 @@
+<html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'base.css' %}">
+
+<body>
+  <div class="headings">
+    <p>Web Scrapping Assignment</p>
+    <p>Scrapping Indeed.com</p>
+  </div>
+  <div class="mainContainer">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>

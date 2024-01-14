@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="tableContainer">
+  <table>
+    <thead class="dataHead">
+      <tr>
+        <th>Job Title</th>
+        <th>Salary</th>
+        <th>Company Detail</th>
+        <th>Job Description</th>
+        <th>Job Requirment</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="dataData">
+      {% for dataDicts in parsedData %}
+      <tr>
+        <td>{{dataDicts.JobTitle}}</td>
+        <td>{{dataDicts.Salary}}</td>
+        <td>{{dataDicts.CompanyDetail}}</td>
+        <td>{{dataDicts.JobDesc}}</td>
+        <td>{{dataDicts.JobReq}}</td>
+        <td>
+          <form action="fetchDatabase" method = "post">
+            {% csrf_token %}
+            <input type="hidden" name ="dataHolder" value="{{dataDicts}}">
+            <input type="hidden" name ="action" value="delete">
+            <button class="innerButtons">Delete</button>
+          </form>
+          <form action="fetchDatabase" method = "post">
+            {% csrf_token %}
+            <input type="hidden" name ="dataHolder" value="{{dataDicts}}">
+            <input type="hidden" name ="action" value="update">
+            <button class="innerButtons">Update</button>
+          </form>
+        </td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

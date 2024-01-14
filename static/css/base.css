@@ -1,0 +1,132 @@
+html, body {
+  height: 100%;
+  width : 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  margin:0;
+}
+ .headings {
+  width: 100%;
+  text-align: center;
+ }
+ h1{
+  font-size: 40px;
+  color: white;
+ }
+  h5 {
+  padding: 1px;
+  margin: 1px;
+  font-size: 20px;
+  color: white;
+ }
+  h6 {
+  padding: 1px;
+  margin: 1px;
+  font-size: 20px;
+  color: red;
+ }
+p{
+  color: #fff;
+  font-size: 60px;
+ }
+ 
+ .mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  
+}
+.formWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.formContainer{
+  width: 80%;
+  padding-left: 30%;
+}
+ .shifter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;   
+  margin-top: 50px;
+ }
+
+ label {
+  color: #fff;
+  font-size: 30px;
+ }
+
+ .outerButtons {
+  width: 60%;
+  font-size: 30px;
+  margin-bottom: 10px;
+  background-color: black;
+  border-width: 5px;
+  color: white;
+  border-radius: 20px;
+  border-color: white;
+ }
+
+.innerButtons{
+  width: 100%;
+  font-size: 15px;
+  border-width: 1px;
+  color: black;
+  border-radius: 3px;
+  border-color: black;
+  
+}
+
+.tableContainer{
+  width: 80%;
+  overflow-y: scroll;
+  border: cyan 5px solid;
+  border-radius: 10px;
+}
+
+.tableContainer table  {
+  background-color: #282c34;
+  color: #e8e9ee;
+  width: 100%;
+}
+
+tbody, thead{
+  height: inherit;
+}
+th {
+  font-weight: bold;
+  background-color: grey;
+  color: white;
+  padding: 15px;
+  border-color: cyan ;
+}
+td {
+  height: auto;
+  border-bottom: 1px solid black;
+  border-color: cyan ;
+}
+tr:nth-child(even){
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+tr:nth-child(odd) {
+  width: 100%;
+  background-color: white;
+  color: black;
+} 
